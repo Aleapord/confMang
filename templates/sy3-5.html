@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五、CSS 定位属性设置</title>
+</head>
+<style>
+    div.d1{
+        position: relative;
+        left: 30%;
+    }
+    div.d2{
+        position: relative;
+        left: 30%;
+        top: 100px;
+    }
+    p{
+        position: absolute;
+        text-align: center;
+        font-size: 48px;
+        font-weight: bold;
+    }
+    p.p1{
+       color: blue;
+    }
+    p.p2{
+        color: yellow;
+        top: 15px;
+    }
+    p.p3{
+        color: red;
+        top: 30px;
+    }
+
+</style>
+<body>
+<div class="d1"><p class="p1">
+    定位属性示例
+</p>
+<p class="p2">
+定位属性示例
+</p>
+    <p class="p3">
+定位属性示例
+    </p>
+</div>
+<div class="d2"><p class="p1">
+    定位属性示例
+</p>
+<p class="p2">
+定位属性示例
+</p>
+    <p class="p3">
+定位属性示例
+    </p>
+</div>
+</body>
+</html>
