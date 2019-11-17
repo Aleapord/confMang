@@ -62,7 +62,7 @@ def Cover2Json(conf: Conf = '', user: User = ''):
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return render_template('sy3-self.html')
 
 
 @app.route('/index')
