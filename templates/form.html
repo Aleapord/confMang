@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<form method="post">
 
+</form>
+ {{ form.hidden_tag() }}
+                name：{{form.name()}}
+                {%for e in form.name.errors%}
+                <span style="color: red">*{{e}}</span>
+                {%endfor%}
+                password：{{form.password()}}
+
+               {%for e in form.password.errors%}
+                <span style="color: red">*{{e}}</span>
+                {%endfor%}
+    <input type="submit" value="login">
 </body>
 </html>
