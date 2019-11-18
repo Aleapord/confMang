@@ -33,6 +33,7 @@
                             <img src="img/user.png">
                         </em>
                          <form method="post">
+                             {% with ms = get_flashed_messages() %}
                              {{ form.hidden_tag() }}
 {#                            <p class="name"><i></i><input type="text" name="userName"  class="userName" placeholder="请输入用户名"></p>#}
                              <p class="name"><i></i>{{ form.name(class="userName",placeholder="请输入用户名") }}</p>
@@ -44,9 +45,12 @@
                             <p class="remember"><input type="checkbox" name="remember">记住密码</p>
                             <p class="regist"><span>没有账号?</span><a href="regist">立即注册</a></p>
                             <div class="clear"></div>
+                             {% for m in ms %}
+                             <span>{{ m }}</span>
+                             {% endfor %}
+                         {% endwith %}
                         </form>
                     </aside>
-                   
                 </section>               
             </article>
             <footer>
